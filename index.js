@@ -1,4 +1,6 @@
-var body = document.querySelector('body');
+var body = document.querySelector("body");
+var drumpadContainer = document.getElementById("drumpad-container");
+var drumpads = drumpadContainer.children;
 
 var keyA = document.getElementById("key-a");
 var keyS = document.getElementById("key-s");
@@ -22,13 +24,39 @@ var soundSnare = new Audio("sounds/snare.wav");
 var soundTink = new Audio("sounds/tink.wav");
 var soundTom = new Audio("sounds/tom.wav");
 
+
+for (var i = 0; i < drumpads.length; i++) {
+
+	(function attachClickHandler(i) {
+		var keyCode = parseInt(drumpads[i].dataset.key, 10);
+		drumpads[i].addEventListener("mousedown", function(){triggerKey(keyCode)}, false);
+		drumpads[i].addEventListener("mouseup", function(){untriggerKey(keyCode)});
+	})(i);
+
+}
+
 body.onkeydown = function(e) {
 
 	if (!e.metaKey) {
 		e.preventDefault();
+
+		var keyCode = e.keyCode;
+
+		triggerKey(keyCode);
 	}
+}
+
+
+body.onkeyup = function(e) {
 
 	var keyCode = e.keyCode;
+
+	untriggerKey(keyCode);
+}
+
+function triggerKey(keyCode) {
+
+	console.log("triggerKey", keyCode);
 
 	switch (keyCode) {
 		case 65:
@@ -81,10 +109,9 @@ body.onkeydown = function(e) {
 	}
 }
 
+function untriggerKey(keyCode) {
 
-body.onkeyup = function(e) {
-
-	var keyCode = e.keyCode;
+	console.log("untriggerKey", keyCode);
 
 	switch (keyCode) {
 		case 65:
