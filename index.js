@@ -21,15 +21,15 @@ var keyL = document.getElementById("key-l");
 var playingClass = " playing";
 
 // Audio
-var soundBoom = new Audio("sounds/boom.wav");
-var soundClap = new Audio("sounds/clap.wav");
-var soundHihat = new Audio("sounds/hihat.wav");
-var soundKick = new Audio("sounds/kick.wav");
-var soundOpenhat = new Audio("sounds/openhat.wav");
-var soundRide = new Audio("sounds/ride.wav");
-var soundSnare = new Audio("sounds/snare.wav");
-var soundTink = new Audio("sounds/tink.wav");
-var soundTom = new Audio("sounds/tom.wav");
+var bamboo1 = new Audio("sounds/bamboo-1.mp3");
+var bamboo2 = new Audio("sounds/bamboo-2.mp3");
+var bamboo3 = new Audio("sounds/bamboo-3.mp3");
+var bamboo4 = new Audio("sounds/bamboo-4.mp3");
+var bamboo5 = new Audio("sounds/bamboo-5.mp3");
+var bamboo6 = new Audio("sounds/bamboo-6.mp3");
+var bamboo7 = new Audio("sounds/bamboo-7.mp3");
+var bamboo8 = new Audio("sounds/bamboo-8.mp3");
+var bamboo9 = new Audio("sounds/bamboo-9.mp3");
 
 
 /*
@@ -75,7 +75,7 @@ function toggleKey(keyCode, play) {
 		case 65:
 			if (play) {
 				addPlayingClass(keyA);
-				playSound(soundBoom);
+				playSound(bamboo1);
 			}
 			else {
 				removePlayingClass(keyA);
@@ -85,7 +85,7 @@ function toggleKey(keyCode, play) {
 		case 83:
 			if (play) {
 				addPlayingClass(keyS);
-				playSound(soundClap);
+				playSound(bamboo2);
 			}
 			else {
 				removePlayingClass(keyS);
@@ -95,7 +95,7 @@ function toggleKey(keyCode, play) {
 		case 68:
 			if (play) {
 				addPlayingClass(keyD);
-				playSound(soundHihat);
+				playSound(bamboo3);
 			}
 			else {
 				removePlayingClass(keyD);
@@ -105,7 +105,7 @@ function toggleKey(keyCode, play) {
 		case 70:
 			if (play) {
 				addPlayingClass(keyF);
-				playSound(soundKick);
+				playSound(bamboo4);
 			}
 			else {
 				removePlayingClass(keyF);
@@ -115,7 +115,7 @@ function toggleKey(keyCode, play) {
 		case 71:
 			if (play) {
 				addPlayingClass(keyG);
-				playSound(soundOpenhat);
+				playSound(bamboo5);
 			}
 			else {
 				removePlayingClass(keyG);
@@ -125,7 +125,7 @@ function toggleKey(keyCode, play) {
 		case 72:
 			if (play) {
 				addPlayingClass(keyH);
-				playSound(soundRide);
+				playSound(bamboo6);
 			}
 			else {
 				removePlayingClass(keyH);
@@ -135,7 +135,7 @@ function toggleKey(keyCode, play) {
 		case 74:
 			if (play) {
 				addPlayingClass(keyJ);
-				playSound(soundSnare);
+				playSound(bamboo7);
 			}
 			else {
 				removePlayingClass(keyJ);
@@ -145,7 +145,7 @@ function toggleKey(keyCode, play) {
 		case 75:
 			if (play) {
 				addPlayingClass(keyK);
-				playSound(soundTink);
+				playSound(bamboo8);
 			}
 			else {
 				removePlayingClass(keyK);
@@ -155,7 +155,7 @@ function toggleKey(keyCode, play) {
 		case 76:
 			if (play) {
 				addPlayingClass(keyL);
-				playSound(soundTom);
+				playSound(bamboo9);
 			}
 			else {
 				removePlayingClass(keyL);
