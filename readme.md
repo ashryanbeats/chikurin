@@ -8,6 +8,10 @@ A little sound-maker made in [Miyanojo, Japan](https://ja.wikipedia.org/wiki/%E5
 
 Written in vanilla JavaScript.
 
+## [Try Chikurin here](https://ashryanbeats.github.io/chikurin/)
+
+***
+
 Todos:
 
 - mobile support
