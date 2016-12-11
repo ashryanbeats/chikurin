@@ -15,5 +15,4 @@ Written in vanilla JavaScript.
 Todos:
 
 - mobile support
-- add background audio
 - add info about where this thing was made
