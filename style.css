@@ -9,7 +9,7 @@ div {
 }
 
 header {
-	background: linear-gradient(to bottom, rgba(0, 255, 255, 0.7), rgba(0, 255, 255, 0.0));
+	background: linear-gradient(to bottom, rgba(0, 255, 255, 0.5), rgba(0, 255, 255, 0.0));
 	margin: 0;
 }
 
@@ -21,6 +21,18 @@ h1 {
 	text-align: center;
 	font-size: 128px;
 	font-weight: lighter;
+}
+
+p {
+	font-family: sans-serif;
+	margin: 0;
+	color: rgb(255, 255, 255);
+	font-size: 18px;
+}
+
+a {
+	text-decoration: none;
+	color: white;
 }
 
 button {
@@ -48,6 +60,15 @@ button {
 	position: relative;
 	top: 40%;
 	transform: translateY(-50%);	
+}
+
+#links-container {
+	text-align: center;
+	position: relative;
+	top: 57%;
+	transform: translateY(-50%);
+	background: linear-gradient(to bottom, rgba(100, 100, 125, 0.0), rgba(100, 100, 125, 0.7));
+	padding: 40px;	
 }
 
 .drumpad {
