@@ -1,0 +1,53 @@
+body {
+	background-image: url("images/bamboo.jpg");
+	margin: 0;
+}
+
+div {
+	font-family: sans-serif;
+}
+
+header {
+	background: linear-gradient(to bottom, rgba(0, 255, 255, 0.7), rgba(0, 255, 255, 0.0));
+	margin: 0;
+}
+
+h1 {
+	font-family: serif;
+	font-style: italic;
+	margin: 0;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	font-size: 128px;
+	font-weight: lighter;
+}
+
+#main-container {
+	height: 90vh;
+}
+
+#drumpad-container {
+	text-align: center;
+	position: relative;
+	top: 40%;
+	transform: translateY(-50%);
+}
+
+.drumpad {
+	display: inline-block;
+	margin: 2px 0;
+	padding: 20px 30px;
+	width: 30px;
+	max-width: 30px;
+	font-size: 36px;
+	color: white;
+	background: rgba(0, 255, 255, 0.5);
+	border: 2px solid white;
+}
+
+.playing {
+	font-weight: bold;
+	color: yellow;
+	border: 4px solid yellow;
+	width: 26px;	
+}
