@@ -37,6 +37,7 @@ var bamboo9 = new Audio("sounds/bamboo-9.mp3");
 
 var birds = new Audio("sounds/birds.mp3");
 var water = new Audio("sounds/water.mp3");
+water.volume = 0.2;
 
 
 /*
