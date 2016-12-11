@@ -17,6 +17,10 @@ var keyJ = document.getElementById("key-j");
 var keyK = document.getElementById("key-k");
 var keyL = document.getElementById("key-l");
 
+// Buttons
+var birdsButton = document.getElementById("button-birds");
+var waterButton = document.getElementById("button-water");
+
 // Class for applying style
 var playingClass = " playing";
 
@@ -30,6 +34,9 @@ var bamboo6 = new Audio("sounds/bamboo-6.mp3");
 var bamboo7 = new Audio("sounds/bamboo-7.mp3");
 var bamboo8 = new Audio("sounds/bamboo-8.mp3");
 var bamboo9 = new Audio("sounds/bamboo-9.mp3");
+
+var birds = new Audio("sounds/birds.mp3");
+var water = new Audio("sounds/water.mp3");
 
 
 /*
@@ -67,6 +74,10 @@ body.onkeyup = function(e) {
 	var keyCode = e.keyCode;
 	toggleKey(keyCode, false);
 }
+
+// Click handers for background audio buttons
+birdsButton.addEventListener("click", toggleBirds, false);
+waterButton.addEventListener("click", toggleWater, false);
 
 
 /*
@@ -189,4 +200,32 @@ function playSound(sound) {
 	if (!sound.paused) sound.pause();
 	sound.currentTime = 0;
 	sound.play();
+}
+
+function toggleBirds() {
+	
+	if (!birds.paused) {
+		birdsButton.innerHTML = "Play Birds";
+
+		birds.pause();
+		birds.currentTime = 0;
+	}
+	else {
+		birdsButton.innerHTML = "Stop Birds";
+		birds.play();
+	}
+}
+
+function toggleWater() {
+	
+	if (!water.paused) {
+		waterButton.innerHTML = "Play Water";
+
+		water.pause();
+		water.currentTime = 0;
+	}
+	else {
+		waterButton.innerHTML = "Stop Water";
+		water.play();
+	}
 }

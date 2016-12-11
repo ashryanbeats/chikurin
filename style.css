@@ -1,5 +1,6 @@
 body {
 	background-image: url("images/bamboo.jpg");
+	background-repeat: no-repeat;
 	margin: 0;
 }
 
