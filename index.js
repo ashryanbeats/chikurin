@@ -80,6 +80,10 @@ body.onkeyup = function(e) {
 birdsButton.addEventListener("click", toggleBirds, false);
 waterButton.addEventListener("click", toggleWater, false);
 
+// Audio events
+birds.addEventListener("ended", endBirds, false);
+water.addEventListener("ended", endWater, false);
+
 
 /*
 	HELPER FUNCTIONS
@@ -229,4 +233,14 @@ function toggleWater() {
 		waterButton.innerHTML = "Stop Water";
 		water.play();
 	}
+}
+
+function endBirds() {
+
+	birdsButton.innerHTML = "Play Birds";
+}
+
+function endWater() {
+
+	waterButton.innerHTML = "Play Water"
 }
