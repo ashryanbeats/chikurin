@@ -43,11 +43,9 @@ for (var i = 0; i < drumpads.length; i++) {
 
 		// Play start
 		drumpads[i].addEventListener("mousedown", function(){toggleKey(keyCode, true)}, false);
-		drumpads[i].addEventListener("touchstart", function(){toggleKey(keyCode, true)}, false);
 		
 		// Play end
 		drumpads[i].addEventListener("mouseup", function(){toggleKey(keyCode, false)});
-		drumpads[i].addEventListener("touchend", function(){toggleKey(keyCode, false)});
 	})(i);
 
 }
