@@ -4,9 +4,9 @@
 // Containers
 var body = document.querySelector("body");
 var drumpadContainer = document.getElementById("drumpad-container");
+var drumpadRows = drumpadContainer.children;
 
 // Drumpads
-var drumpads = drumpadContainer.children;
 var keyA = document.getElementById("key-a");
 var keyS = document.getElementById("key-s");
 var keyD = document.getElementById("key-d");
@@ -44,18 +44,21 @@ water.volume = 0.2;
 	EVENT INITIALIZATION
 */
 // Add mouse handlers to drumpads
-for (var i = 0; i < drumpads.length; i++) {
+for (var i = 0; i < drumpadRows.length; i++) {
 
-	(function attachMouseHandlers(i) {
-		var keyCode = parseInt(drumpads[i].dataset.key, 10);
+	for (var j = 0; j < drumpadRows[i].children.length; j++) {
 
-		// Play start
-		drumpads[i].addEventListener("mousedown", function(){toggleKey(keyCode, true)}, false);
-		
-		// Play end
-		drumpads[i].addEventListener("mouseup", function(){toggleKey(keyCode, false)});
-	})(i);
+		var drumpad = drumpadRows[i].children[j];
 
+		(function attachMouseHandlers(i) {
+			var keyCode = parseInt(drumpad.dataset.key, 10);
+			// Play start
+			drumpad.addEventListener("mousedown", function(){toggleKey(keyCode, true)}, false);
+			
+			// Play end
+			drumpad.addEventListener("mouseup", function(){toggleKey(keyCode, false)});
+		})(i);
+	}
 }
 
 // Trigger play on keyboard keydown

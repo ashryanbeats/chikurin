@@ -8,11 +8,12 @@ body {
 	background-size: cover;
 	background-position: center;
 	margin: 0;
-}
-
-div {
 	font-family: sans-serif;
 }
+
+/*div {
+	font-family: sans-serif;
+}*/
 
 header {
 	background:  rgba(100, 100, 125, 0.7);
@@ -23,11 +24,11 @@ header {
 h1 {
 	font-family: serif;
 	font-style: italic;
-	margin: 0;
-	color: rgb(255, 255, 255);
-	text-align: center;
 	font-size: 128px;
 	font-weight: lighter;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	margin: 0;
 }
 
 a {
@@ -56,22 +57,26 @@ input[type="button"]:focus {
 	color: white;
 }
 
-#main-container {
+/*#main-container {
 	height: 90vh;
-}
+}*/
 
 #drumpad-container {
 	text-align: center;
-	position: relative;
+	width: 50%;
+	margin: 0 auto;
+/*	position: relative;
 	top: 20%;
-	transform: translateY(-50%);
+	transform: translateY(-50%);*/
 }
 
 #controls-container {
 	text-align: center;
-	position: relative;
+	width: 40%;
+	margin: 0 auto;
+/*	position: relative;
 	top: 20%;
-	transform: translateY(-50%);	
+	transform: translateY(-50%);*/	
 }
 
 .link {
@@ -102,15 +107,15 @@ input[type="button"]:focus {
 
 @media only screen and (min-width: 981px) {
 	.drumpad {
-		display: inline-block;
-		margin: 2px 0;
+/*		display: inline-block; */
+/*		margin: 2px 0;
 		padding: 34px 48px;
 		width: 30px;
 		max-width: 30px;
-		font-size: 36px;
+		font-size: 36px;*/
 		color: white;
 		background: rgba(0, 255, 255, 0.5);
-		border: 2px solid white;
+		/*border: 2px solid white;*/
 	}
 }
 
