@@ -3,6 +3,8 @@
 */
 // Containers
 var body = document.querySelector("body");
+var appContainer = document.getElementById("app");
+var loadSoundsContainer = document.getElementById("load-sounds");
 var drumpadContainer = document.getElementById("drumpad-container");
 var drumpadRows = drumpadContainer.children;
 
@@ -20,6 +22,7 @@ var keyL = document.getElementById("key-l");
 // Buttons
 var birdsButton = document.getElementById("button-birds");
 var waterButton = document.getElementById("button-water");
+var loadSoundsButton = document.getElementById("load-sounds");
 
 // Class for applying style
 var playingClass = " playing";
@@ -38,6 +41,22 @@ var bamboo9 = new Audio("sounds/bamboo-9.mp3");
 var birds = new Audio("sounds/birds.mp3");
 var water = new Audio("sounds/water.mp3");
 water.volume = 0.2;
+
+
+/*
+	INITIALIZATION FOR IOS
+*/
+(function() {
+
+	if( /iPhone|iPad|iPod/i.test(navigator.userAgent) ) {
+		appContainer.style.display = "none";
+		loadSoundsContainer.style.display = "initial";
+	}
+	else {
+		appContainer.style.display = "initial";
+		loadSoundsContainer.style.display = "none";		
+	}
+})()
 
 
 /*
@@ -82,6 +101,7 @@ body.onkeyup = function(e) {
 // Click handers for background audio buttons
 birdsButton.addEventListener("click", toggleBirds, false);
 waterButton.addEventListener("click", toggleWater, false);
+loadSoundsButton.addEventListener("click", loadSounds, false);
 
 // Audio events
 birds.addEventListener("ended", endBirds, false);
@@ -246,4 +266,20 @@ function endBirds() {
 function endWater() {
 
 	waterButton.innerHTML = "Play Water"
+}
+
+function loadSounds() {
+
+	bamboo1.load();
+	bamboo2.load();
+	bamboo3.load();
+	bamboo4.load();
+	bamboo5.load();
+	bamboo6.load();
+	bamboo7.load();
+	bamboo8.load();
+	bamboo9.load();
+
+	appContainer.style.display = "initial";
+	loadSoundsContainer.style.display = "none";
 }

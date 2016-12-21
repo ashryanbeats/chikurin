@@ -59,6 +59,11 @@ input[type="button"]:focus {
 	color: white;
 }
 
+#load-sounds-ios {
+	width: 70vw;
+	padding-top: 50%;
+}
+
 #drumpad-container {
 	width: 33vw;
 	margin-bottom: 20px;
