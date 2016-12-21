@@ -4,7 +4,7 @@
 // Containers
 var body = document.querySelector("body");
 var appContainer = document.getElementById("app");
-var loadSoundsContainer = document.getElementById("load-sounds");
+var loadSoundsContainer = document.getElementById("load-sounds-container");
 var drumpadContainer = document.getElementById("drumpad-container");
 var drumpadRows = drumpadContainer.children;
 
@@ -22,7 +22,7 @@ var keyL = document.getElementById("key-l");
 // Buttons
 var birdsButton = document.getElementById("button-birds");
 var waterButton = document.getElementById("button-water");
-var loadSoundsButton = document.getElementById("load-sounds");
+var loadSoundsButton = document.getElementById("load-sounds-button");
 
 // Class for applying style
 var playingClass = " playing";
@@ -46,18 +46,18 @@ water.volume = 0.2;
 /*
 	INITIALIZATION FOR IOS
 */
-(function() {
+(function initIOS() {
+
+	console.log("here")
 
 	if( /iPhone|iPad|iPod/i.test(navigator.userAgent) ) {
 		appContainer.style.display = "none";
-		loadSoundsContainer.style.display = "initial";
 	}
 	else {
-		appContainer.style.display = "initial";
+		console.log("here")
 		loadSoundsContainer.style.display = "none";		
 	}
-})()
-
+})();
 
 /*
 	EVENT INITIALIZATION

@@ -59,7 +59,7 @@ input[type="button"]:focus {
 	color: white;
 }
 
-#load-sounds-ios {
+#load-sounds-container {
 	width: 70vw;
 	padding-top: 50%;
 }
