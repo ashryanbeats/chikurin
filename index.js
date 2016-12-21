@@ -48,13 +48,10 @@ water.volume = 0.2;
 */
 (function initIOS() {
 
-	console.log("here")
-
 	if( /iPhone|iPad|iPod/i.test(navigator.userAgent) ) {
 		appContainer.style.display = "none";
 	}
 	else {
-		console.log("here")
 		loadSoundsContainer.style.display = "none";		
 	}
 })();
